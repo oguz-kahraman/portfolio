@@ -225,3 +225,51 @@ hr{border:0;border-top:1px solid var(--line);margin:28px 0}
     }
 
 }
+/* ===== Global Compact Layout ===== */
+
+html {
+    font-size: 14px;
+}
+
+.section {
+    padding: 54px 0;
+}
+
+.page-hero {
+    padding: 44px 0;
+}
+
+.section-head {
+    margin-bottom: 24px;
+}
+
+.project-hero {
+    margin-bottom: 24px;
+}
+
+.project-hero img {
+    height: clamp(240px, 34vw, 430px);
+}
+
+.card {
+    padding: 22px;
+}
+
+.grid-2,
+.grid-3 {
+    gap: 18px;
+}
+
+.stat-grid {
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.project-gallery {
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.gallery-item img {
+    height: 190px;
+}
