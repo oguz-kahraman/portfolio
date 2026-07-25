@@ -1294,3 +1294,7 @@ hr{
     gap: 18px;
   }
 }
+.publications-list .btn {
+    display: table;
+    margin: 12px 0 0 auto;
+}
