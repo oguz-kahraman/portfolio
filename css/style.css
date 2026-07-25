@@ -1252,3 +1252,45 @@ hr{
 .publications-list {
     grid-template-columns: 1fr;
 }
+.publication-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.publication-card-content {
+    flex: 1;
+}
+
+.publication-card .btn {
+    flex-shrink: 0;
+}
+.publications-list {
+  grid-template-columns: 1fr;
+}
+
+.publication-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.publication-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.publication-card .btn {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .publication-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
