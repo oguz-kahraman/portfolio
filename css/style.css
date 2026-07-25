@@ -1353,3 +1353,6 @@ hr{
     align-items: flex-start;
   }
 }
+.additional-publications{
+    padding-top:10px;
+}
