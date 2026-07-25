@@ -3,21 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Selected engineering projects delivered by Oguz Kahraman">
+
+  <meta
+    name="description"
+    content="Selected engineering projects delivered by Oguz Kahraman, including mining infrastructure, tailings storage facilities and wind energy projects."
+  >
+
   <title>Projects | Oguz Kahraman</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .project-hero {
+      margin-bottom: 32px;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.09);
+    }
+
+    .project-hero img {
+      display: block;
+      width: 100%;
+      height: clamp(280px, 48vw, 580px);
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.35s ease;
+    }
+
+    .project-hero:hover img {
+      transform: scale(1.015);
+    }
+
+    .project-hero figcaption {
+      padding: 14px 18px;
+      color: #5a6470;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      margin: 0;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      cursor: pointer;
+      transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+      opacity: 0.94;
+    }
+
+    .gallery-item figcaption {
+      padding: 13px 15px 15px;
+      color: #4f5965;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .gallery-heading {
+      margin-top: 42px;
+      margin-bottom: 8px;
+    }
+
+    .gallery-intro {
+      max-width: 820px;
+      margin-bottom: 20px;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: rgba(7, 12, 18, 0.94);
+    }
+
+    .image-lightbox.open {
+      display: flex;
+    }
+
+    .image-lightbox-content {
+      position: relative;
+      width: min(1200px, 96vw);
+      max-height: 92vh;
+      text-align: center;
+    }
+
+    .image-lightbox img {
+      display: block;
+      max-width: 100%;
+      max-height: 82vh;
+      margin: 0 auto;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .image-lightbox-caption {
+      margin-top: 14px;
+      color: #ffffff;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -42px;
+      right: 0;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      font-size: 2.3rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .project-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item img {
+        height: 250px;
+      }
+
+      .image-lightbox {
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="container nav-wrap">
+
     <a class="brand" href="index.html">
       <span class="brand-mark">OK</span>
-      <span>Oguz Kahraman<small>Professional Engineering Portfolio</small></span>
+
+      <span>
+        Oguz Kahraman
+        <small>Professional Engineering Portfolio</small>
+      </span>
     </a>
-    <button class="nav-toggle" aria-label="Open navigation">☰</button>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
     <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -27,409 +196,980 @@
       <a href="credentials.html">Credentials</a>
       <a href="contact.html">Contact</a>
     </nav>
+
   </div>
 </header>
 
 <main id="main">
 
-<section class="page-hero">
-  <div class="container">
-    <div class="kicker">PROJECT PORTFOLIO</div>
-    <h1>Selected Engineering Projects</h1>
-    <p>
-      A selection of major mining, infrastructure and renewable energy projects
-      demonstrating construction leadership, multidisciplinary coordination,
-      risk-based decision-making and practical engineering delivery.
-    </p>
-  </div>
-</section>
+  <!-- PAGE INTRODUCTION -->
 
-<section class="section alt" id="perkoa-raise">
-  <div class="container">
-    <div class="section-head">
+  <section class="page-hero">
+    <div class="container">
+
+      <div class="kicker">PROJECT PORTFOLIO</div>
+
+      <h1>Selected Engineering Projects</h1>
+
+      <p>
+        A selection of major mining infrastructure and renewable energy projects
+        demonstrating construction leadership, multidisciplinary coordination,
+        risk-based decision-making and practical engineering delivery.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- PERKOA PHASE I & II -->
+
+  <section class="section alt" id="perkoa-raise">
+    <div class="container">
+
+      <div class="section-head">
+        <div>
+          <div class="kicker">
+            BURKINA FASO · CONSTRUCTION MANAGER
+          </div>
+
+          <h2>
+            Perkoa Zinc Mine — TSF II Phase I &amp; II Berm Raising
+          </h2>
+        </div>
+
+        <p>
+          Urgent construction delivery to extend operational tailings storage
+          capacity and support continued mining operations.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>Project Overview</h3>
+
+        <p>
+          The existing Tailings Storage Facility required an urgent increase in
+          storage capacity. I coordinated the construction of a dry-side berm
+          raise that increased the facility crest from approximately
+          297.5 mamsl to 298.7 mamsl.
+        </p>
+
+        <p>
+          The completed works provided approximately 257,649 cubic metres of
+          additional storage capacity, equivalent to approximately 432,000 tonnes
+          of tailings at the applicable specific gravity. Based on the mine’s
+          deposition rate, this provided approximately nine months of additional
+          operational capacity.
+        </p>
+      </div>
+
+
+      <br>
+
+
+      <div class="grid-2">
+
+        <div class="card">
+          <h3>Project Challenge</h3>
+
+          <p>
+            The available tailings capacity was approaching exhaustion and the
+            mine required a safe, buildable and rapidly deliverable solution.
+            The work also had to be executed without compromising ongoing
+            operations, quality requirements or the design authority of the
+            Engineer of Record.
+          </p>
+        </div>
+
+
+        <div class="card">
+          <h3>My Role</h3>
+
+          <ul class="list-clean">
+            <li>✓ Construction planning and programme coordination</li>
+            <li>✓ Contractor and workforce management</li>
+            <li>✓ Procurement and material mobilisation</li>
+            <li>✓ Quality assurance and field verification</li>
+            <li>✓ Health and safety coordination</li>
+            <li>✓ Interface management with the Engineer of Record</li>
+            <li>✓ Reporting to mine management</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <br>
+
+
+      <div class="grid-2">
+
+        <div class="card">
+          <h3>Key Technical Details</h3>
+
+          <ul class="list-clean">
+            <li>
+              <strong>Final crest raise:</strong>
+              1.2 m
+            </li>
+
+            <li>
+              <strong>Execution period:</strong>
+              approximately 20 days
+            </li>
+
+            <li>
+              <strong>Project cost:</strong>
+              approximately USD 400,000
+            </li>
+
+            <li>
+              <strong>Added storage:</strong>
+              approximately 257,649 m³
+            </li>
+
+            <li>
+              <strong>Geomembrane:</strong>
+              approximately 10,900 m²
+            </li>
+
+            <li>
+              <strong>Clay fill:</strong>
+              approximately 14,440 m³
+            </li>
+
+            <li>
+              <strong>Compaction requirement:</strong>
+              95% Standard Proctor
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="card">
+          <h3>Engineering and Delivery Decisions</h3>
+
+          <ul class="list-clean">
+            <li>
+              ✓ Coordinated validation of survey and capacity information
+            </li>
+
+            <li>
+              ✓ Supported evaluation of the initial and final raise options
+            </li>
+
+            <li>
+              ✓ Accelerated procurement of critical liner materials
+            </li>
+
+            <li>
+              ✓ Sequenced works around ongoing mine operations
+            </li>
+
+            <li>
+              ✓ Maintained clear separation between construction management
+              and design responsibility
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <br>
+
+
+      <div class="card">
+        <h3>Project Outcome</h3>
+
+        <p>
+          The work was completed within the urgent operational window and
+          provided approximately nine months of additional storage capacity.
+          This supported continued mining operations while the next phase of the
+          Tailings Storage Facility programme progressed.
+        </p>
+
+        <p>
+          The execution involved accelerated procurement, controlled sequencing,
+          construction quality assurance and close coordination between the mine,
+          contractors, survey teams, quality personnel and the Engineer of Record.
+        </p>
+      </div>
+
+
+      <div class="stat-grid">
+        <div class="stat">
+          <strong>1.2 m</strong>
+          <span>Final crest raise</span>
+        </div>
+
+        <div class="stat">
+          <strong>20 days</strong>
+          <span>Approximate execution period</span>
+        </div>
+
+        <div class="stat">
+          <strong>~9 months</strong>
+          <span>Additional operating capacity</span>
+        </div>
+
+        <div class="stat">
+          <strong>0 LTI</strong>
+          <span>Recorded during the critical execution scope</span>
+        </div>
+      </div>
+
+
+      <h3 class="gallery-heading">
+        Phase I &amp; II Construction Gallery
+      </h3>
+
+      <p class="gallery-intro">
+        Selected photographs showing preparation of the supporting surface,
+        geomembrane installation, welding operations and berm construction.
+      </p>
+
+
+      <div class="project-gallery">
+
+        <figure class="gallery-item">
+          <img
+            src="images/perkoa-subgrade-preparation.jpg"
+            alt="Cleaning and preparation of the supporting surface before HDPE geomembrane installation"
+            loading="lazy"
+            data-caption="Cleaning and preparation of the supporting surface before HDPE geomembrane installation."
+          >
+
+          <figcaption>
+            Subgrade cleaning and preparation before HDPE geomembrane installation.
+          </figcaption>
+        </figure>
+
+
+        <figure class="gallery-item">
+          <img
+            src="images/perkoa-hdpe-installation.jpg"
+            alt="HDPE geomembrane installation at the Perkoa Tailings Storage Facility"
+            loading="lazy"
+            data-caption="HDPE geomembrane installation at the Tailings Storage Facility."
+          >
+
+          <figcaption>
+            HDPE geomembrane installation.
+          </figcaption>
+        </figure>
+
+
+        <figure class="gallery-item">
+          <img
+            src="images/perkoa-hdpe-welding.jpg"
+            alt="HDPE geomembrane welding works at the Perkoa Tailings Storage Facility"
+            loading="lazy"
+            data-caption="HDPE geomembrane welding operations."
+          >
+
+          <figcaption>
+            HDPE geomembrane welding operations.
+          </figcaption>
+        </figure>
+
+
+        <figure class="gallery-item">
+          <img
+            src="images/perkoa-berm-construction.jpg"
+            alt="Berm construction at the Perkoa Tailings Storage Facility"
+            loading="lazy"
+            data-caption="Berm construction and associated earthworks."
+          >
+
+          <figcaption>
+            Berm construction and associated earthworks.
+          </figcaption>
+        </figure>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PERKOA PHASE III -->
+
+  <section class="section" id="perkoa-phase3">
+    <div class="container">
+
+      <div class="section-head">
+        <div>
+          <div class="kicker">
+            BURKINA FASO · CONSTRUCTION MANAGER
+          </div>
+
+          <h2>
+            Perkoa Zinc Mine — TSF II Phase III
+          </h2>
+        </div>
+
+        <p>
+          Multidisciplinary construction management of a new Tailings Storage
+          Facility involving major earthworks, geomembrane lining and drainage
+          infrastructure.
+        </p>
+      </div>
+
+
+      <figure class="project-hero">
+        <img
+          src="images/perkoa-phase3-hero.jpg"
+          alt="Panoramic view of Perkoa TSF II Phase III"
+          data-caption="Panoramic view of the Perkoa TSF II Phase III construction area."
+        >
+
+        <figcaption>
+          Panoramic view of the Perkoa TSF II Phase III construction area.
+        </figcaption>
+      </figure>
+
+
+      <div class="card">
+        <h3>Project Overview</h3>
+
+        <p>
+          TSF II Phase III was developed to provide the mine with long-term
+          tailings storage capacity. The project included large-scale earthworks,
+          geomembrane installation, drainage and leak-detection infrastructure,
+          construction quality control and progressive commissioning activities.
+        </p>
+
+        <p>
+          I coordinated the construction programme and contractor interfaces,
+          while the appointed Engineer of Record retained responsibility for
+          design, technical approval and engineering verification.
+        </p>
+      </div>
+
+
+      <br>
+
+
+      <div class="grid-2">
+
+        <div class="card">
+          <h3>Project Challenge</h3>
+
+          <p>
+            The project required major earthworks and specialist liner works to
+            be delivered in a remote operating environment. Success depended on
+            disciplined sequencing, material planning, contractor coordination
+            and clear technical interfaces between construction teams and the
+            Engineer of Record.
+          </p>
+        </div>
+
+
+        <div class="card">
+          <h3>My Role</h3>
+
+          <ul class="list-clean">
+            <li>✓ Construction sequencing and programme management</li>
+            <li>✓ Contractor coordination and interface management</li>
+            <li>✓ Procurement evaluation and material planning</li>
+            <li>✓ QA/QC coordination for earthworks and geomembrane</li>
+            <li>✓ Progress monitoring and management reporting</li>
+            <li>✓ Coordination with operations and technical teams</li>
+            <li>✓ Safety and environmental implementation</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <br>
+
+
+      <div class="grid-2">
+
+        <div class="card">
+          <h3>Key Technical Details</h3>
+
+          <ul class="list-clean">
+            <li>
+              <strong>Facility footprint:</strong>
+              approximately 500 m × 250 m
+            </li>
+
+            <li>
+              <strong>Maximum height:</strong>
+              approximately 11 m
+            </li>
+
+            <li>
+              <strong>Earthworks:</strong>
+              approximately 500,000 m³
+            </li>
+
+            <li>
+              <strong>Geomembrane:</strong>
+              approximately 170,000 m²
+            </li>
+
+            <li>
+              <strong>Drainage pipeline:</strong>
+              approximately 3,000 m
+            </li>
+
+            <li>
+              <strong>Delivery period:</strong>
+              January 2019 to March 2021
+            </li>
+
+            <li>
+              <strong>Approximate project value:</strong>
+              USD 7 million
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="card">
+          <h3>Management Approach</h3>
+
+          <ul class="list-clean">
+            <li>
+              ✓ Coordinated multiple contractors and technical disciplines
+            </li>
+
+            <li>
+              ✓ Monitored progress through structured reporting
+            </li>
+
+            <li>
+              ✓ Supported supplier evaluation for geomembrane works
+            </li>
+
+            <li>
+              ✓ Integrated survey, quality and construction information
+            </li>
+
+            <li>
+              ✓ Maintained client, contractor and Engineer of Record interfaces
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <br>
+
+
+      <div class="card">
+        <h3>Project Outcome</h3>
+
+        <p>
+          The project delivered a new operational tailings storage facility
+          through coordinated construction management, quality control and
+          disciplined interface management between the client, contractors,
+          survey personnel, quality teams and the Engineer of Record.
+        </p>
+
+        <p>
+          The project also demonstrated the importance of maintaining clear
+          separation between construction management responsibility and
+          engineering design responsibility on complex infrastructure works.
+        </p>
+      </div>
+
+
+      <div class="stat-grid">
+        <div class="stat">
+          <strong>~500,000 m³</strong>
+          <span>Earthworks</span>
+        </div>
+
+        <div class="stat">
+          <strong>~170,000 m²</strong>
+          <span>Geomembrane lining</span>
+        </div>
+
+        <div class="stat">
+          <strong>~3,000 m</strong>
+          <span>Drainage infrastructure</span>
+        </div>
+
+        <div class="stat">
+          <strong>2019–2021</strong>
+          <span>Delivery period</span>
+        </div>
+      </div>
+
+
+      <h3 class="gallery-heading">
+        Phase III Construction Gallery
+      </h3>
+
+      <p class="gallery-intro">
+        Selected photographs documenting earthworks, material mobilisation,
+        access construction and project team coordination.
+      </p>
+
+
+      <div class="project-gallery">
+
+        <figure class="gallery-item">
+          <img
+            src="images/perkoa-earthworks.jpg"
+            alt="Heavy earthmoving equipment working on Perkoa TSF II Phase III"
+            loading="lazy"
+            data-caption="Large-scale earthworks undertaken for TSF II Phase III."
+          >
+
+          <figcaption>
+            Large-scale earthworks for TSF II Phase III.
+          </figcaption>
+        </figure>
+
+
+        <figure class="gallery-item">
+          <img
+            src="images/perkoa-geomembrane-rolls.jpg"
+            alt="Geomembrane rolls delivered to the Perkoa project site"
+            loading="lazy"
+            data-caption="Geomembrane materials delivered and stored before installation."
+          >
+
+          <figcaption>
+            Geomembrane materials delivered before installation.
+          </figcaption>
+        </figure>
+
+
+        <figure class="gallery-item">
+          <img
+            src="images/perkoa-access-road.jpg"
+            alt="Construction access road at Perkoa TSF II Phase III"
+            loading="lazy"
+            data-caption="Construction access and haul-road development."
+          >
+
+          <figcaption>
+            Construction access and haul-road development.
+          </figcaption>
+        </figure>
+
+
+        <figure class="gallery-item">
+          <img
+            src="images/perkoa-team.jpg"
+            alt="Perkoa Tailings Storage Facility construction team"
+            loading="lazy"
+            data-caption="Project team during construction delivery."
+          >
+
+          <figcaption>
+            Project team during construction delivery.
+          </figcaption>
+        </figure>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- OVACIK WIND POWER PLANT -->
+
+  <section class="section alt" id="ovacik">
+    <div class="container">
+
+      <div class="section-head">
+        <div>
+          <div class="kicker">
+            TÜRKİYE · SITE MANAGER
+          </div>
+
+          <h2>Ovacık Wind Power Plant</h2>
+        </div>
+
+        <p>
+          Civil works, logistics and turbine erection management for a
+          utility-scale wind energy project in mountainous terrain.
+        </p>
+      </div>
+
+
+      <figure class="project-hero">
+        <img
+          src="images/ovacik-hero.jpg"
+          alt="Wind turbine erection at the Ovacık Wind Power Plant"
+          data-caption="Wind turbine erection activities at the Ovacık Wind Power Plant."
+        >
+
+        <figcaption>
+          Wind turbine erection activities at the Ovacık Wind Power Plant.
+        </figcaption>
+      </figure>
+
+
+      <div class="card">
+        <h3>Project Overview</h3>
+
+        <p>
+          The Ovacık Wind Power Plant included seven Nordex N131 wind turbines.
+          Project delivery required the coordination of civil works, heavy-lift
+          operations, turbine component logistics, route preparation and
+          installation activities.
+        </p>
+
+        <p>
+          Each turbine blade was approximately 65.5 metres long. Transporting the
+          blades through mountainous terrain required careful route assessment,
+          coordination of overhead and geometric constraints, and the use of a
+          blade-lifter system capable of raising the blade to an angle of
+          approximately 45 degrees.
+        </p>
+      </div>
+
+
+      <br>
+
+
+      <div class="grid-2">
+
+        <div class="card">
+          <h3>Project Challenge</h3>
+
+          <p>
+            The route included narrow curves, overhead constraints and limited
+            road geometry. A conventional transport approach would have required
+            more extensive road widening, additional temporary works and greater
+            environmental disturbance.
+          </p>
+        </div>
+
+
+        <div class="card">
+          <h3>My Role</h3>
+
+          <ul class="list-clean">
+            <li>✓ Site management and construction coordination</li>
+            <li>✓ Civil works and access-road preparation</li>
+            <li>✓ Turbine component logistics</li>
+            <li>✓ Blade transportation coordination</li>
+            <li>✓ Heavy-lift and crane interface management</li>
+            <li>✓ Contractor and stakeholder coordination</li>
+            <li>✓ Health, safety and environmental implementation</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <br>
+
+
+      <div class="grid-2">
+
+        <div class="card">
+          <h3>Key Technical Details</h3>
+
+          <ul class="list-clean">
+            <li>
+              <strong>Wind turbines:</strong>
+              7 Nordex N131 units
+            </li>
+
+            <li>
+              <strong>Blade length:</strong>
+              approximately 65.5 m
+            </li>
+
+            <li>
+              <strong>Blade-lifter angle:</strong>
+              up to approximately 45°
+            </li>
+
+            <li>
+              <strong>Main erection crane:</strong>
+              approximately 600 tonnes
+            </li>
+
+            <li>
+              <strong>Project environment:</strong>
+              mountainous terrain
+            </li>
+
+            <li>
+              <strong>Key challenge:</strong>
+              oversized component transportation
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="card">
+          <h3>Engineering Contribution</h3>
+
+          <p>
+            The blade transportation strategy enabled the convoy to negotiate
+            difficult route sections while reducing the extent of road widening
+            that would otherwise have been required.
+          </p>
+
+          <p>
+            The solution combined route planning, access preparation, temporary
+            traffic arrangements, specialist transportation equipment and close
+            operational coordination.
+          </p>
+        </div>
+
+      </div>
+
+
+      <br>
+
+
+      <div class="card">
+        <h3>Project Outcome</h3>
+
+        <p>
+          The transportation and erection activities were delivered through
+          coordinated civil, logistics and heavy-lift planning. The blade-lifter
+          solution provided a practical response to the project’s route
+          constraints and later received national media coverage.
+        </p>
+
+        <a
+          class="btn btn-dark"
+          target="_blank"
+          rel="noopener"
+          href="https://www.dha.com.tr/ekonomi/ruzgar-turbinleri-kanatlarinin-daglik-arazide-tasinmasi-icin-proje-gelistirildi-2779869"
+        >
+          View Media Coverage
+        </a>
+      </div>
+
+
+      <div class="stat-grid">
+        <div class="stat">
+          <strong>7</strong>
+          <span>Wind turbines</span>
+        </div>
+
+        <div class="stat">
+          <strong>65.5 m</strong>
+          <span>Blade length</span>
+        </div>
+
+        <div class="stat">
+          <strong>45°</strong>
+          <span>Blade-lifter operating angle</span>
+        </div>
+
+        <div class="stat">
+          <strong>600 t</strong>
+          <span>Main erection crane</span>
+        </div>
+      </div>
+
+
+      <h3 class="gallery-heading">
+        Project Gallery
+      </h3>
+
+      <p class="gallery-intro">
+        Selected photographs showing specialist blade transportation,
+        heavy-lift operations and completed turbine installation.
+      </p>
+
+
+      <div class="project-gallery">
+
+        <figure class="gallery-item">
+          <img
+            src="images/ovacik-blade-handling.jpg"
+            alt="Specialist handling of a wind turbine blade at the Ovacık project"
+            loading="lazy"
+            data-caption="Specialist handling and transportation preparation for a wind turbine blade."
+          >
+
+          <figcaption>
+            Specialist blade handling and transport preparation.
+          </figcaption>
+        </figure>
+
+
+        <figure class="gallery-item">
+          <img
+            src="images/ovacik-blade-lifter.jpg"
+            alt="Blade-lifter equipment used at the Ovacık Wind Power Plant"
+            loading="lazy"
+            data-caption="Blade-lifter system used to negotiate constrained sections of the transportation route."
+          >
+
+          <figcaption>
+            Blade-lifter system used on the constrained transportation route.
+          </figcaption>
+        </figure>
+
+
+        <figure class="gallery-item">
+          <img
+            src="images/ovacik-completed-turbine.jpg"
+            alt="Completed wind turbine at the Ovacık Wind Power Plant"
+            loading="lazy"
+            data-caption="Completed wind turbine installation at the Ovacık Wind Power Plant."
+          >
+
+          <figcaption>
+            Completed wind turbine installation.
+          </figcaption>
+        </figure>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SUPPORTING EVIDENCE -->
+
+  <section class="section">
+    <div class="container grid-2">
+
       <div>
-        <div class="kicker">BURKINA FASO · CONSTRUCTION MANAGER</div>
-        <h2>Perkoa Zinc Mine — TSF II Phase I &amp; II Berm Raising</h2>
-      </div>
-      <p>
-        Urgent construction delivery to extend operational tailings storage
-        capacity and support continued mining operations.
-      </p>
-    </div>
+        <div class="kicker">
+          SUPPORTING EVIDENCE
+        </div>
 
-    <div class="card">
-      <h3>Project Overview</h3>
-      <p>
-        The existing Tailings Storage Facility required an urgent increase in
-        storage capacity. I coordinated the construction of a dry-side berm
-        raise that increased the facility crest from approximately
-        297.5 mamsl to 298.7 mamsl.
-      </p>
-      <p>
-        The completed works provided approximately 257,649 cubic metres of
-        additional storage capacity, equivalent to approximately 432,000 tonnes
-        of tailings at the applicable specific gravity. Based on the mine's
-        deposition rate, this provided approximately nine months of additional
-        operational capacity.
-      </p>
-    </div>
+        <h2>Project Documents and Photographs</h2>
 
-    <br>
-
-    <div class="grid-2">
-      <div class="card">
-        <h3>Project Challenge</h3>
         <p>
-          The available tailings capacity was approaching exhaustion and the
-          mine required a safe, buildable and rapidly deliverable solution.
-          The work also had to be executed without compromising ongoing
-          operations, quality requirements or the design authority of the
-          Engineer of Record.
+          Selected project summaries, organisation charts, construction
+          photographs, quality records and supporting evidence are indexed on
+          the IET Fellowship page.
         </p>
+
+        <a class="btn btn-dark" href="fellowship.html">
+          View IET Fellowship Evidence
+        </a>
       </div>
 
-      <div class="card">
-        <h3>My Role</h3>
-        <ul class="list-clean">
-          <li>✓ Construction planning and programme coordination</li>
-          <li>✓ Contractor and workforce management</li>
-          <li>✓ Procurement and material mobilisation</li>
-          <li>✓ Quality assurance and field verification</li>
-          <li>✓ Health and safety coordination</li>
-          <li>✓ Interface management with the Engineer of Record</li>
-          <li>✓ Reporting to mine management</li>
-        </ul>
-      </div>
-    </div>
 
-    <br>
-
-    <div class="grid-2">
       <div class="card">
-        <h3>Key Technical Details</h3>
+        <h3>Evidence Categories</h3>
+
         <ul class="list-clean">
-          <li><strong>Final crest raise:</strong> 1.2 m</li>
-          <li><strong>Execution period:</strong> approximately 20 days</li>
-          <li><strong>Project cost:</strong> approximately USD 400,000</li>
-          <li><strong>Added storage:</strong> approximately 257,649 m³</li>
-          <li><strong>Geomembrane:</strong> approximately 10,900 m²</li>
-          <li><strong>Clay fill:</strong> approximately 14,440 m³</li>
-          <li><strong>Compaction:</strong> 95% Standard Proctor</li>
+          <li>✓ Organisation and reporting structures</li>
+          <li>✓ Construction photographs</li>
+          <li>✓ QA/QC records</li>
+          <li>✓ Procurement and alternatives evaluations</li>
+          <li>✓ Project delivery summaries</li>
+          <li>✓ Media and publication evidence</li>
         </ul>
       </div>
 
-      <div class="card">
-        <h3>Engineering and Delivery Decisions</h3>
-        <ul class="list-clean">
-          <li>✓ Coordinated validation of survey and capacity information</li>
-          <li>✓ Supported evaluation of the initial and final raise options</li>
-          <li>✓ Accelerated procurement of critical liner materials</li>
-          <li>✓ Sequenced works around ongoing mine operations</li>
-          <li>✓ Maintained clear separation between construction management and design responsibility</li>
-        </ul>
-      </div>
     </div>
-
-    <br>
-
-    <div class="card">
-      <h3>Project Outcome</h3>
-      <p>
-        The work was completed within the urgent operational window and
-        provided approximately nine months of additional storage capacity.
-        This supported continued mining operations while the next phase of the
-        Tailings Storage Facility programme progressed.
-      </p>
-      <p>
-        The execution involved accelerated procurement, controlled sequencing,
-        construction quality assurance and close coordination between the mine,
-        contractors, survey teams, quality personnel and the Engineer of Record.
-      </p>
-    </div>
-
-    <div class="stat-grid">
-      <div class="stat"><strong>1.2 m</strong><span>Final crest raise</span></div>
-      <div class="stat"><strong>20 days</strong><span>Approximate execution period</span></div>
-      <div class="stat"><strong>~9 months</strong><span>Additional operating capacity</span></div>
-      <div class="stat"><strong>0 LTI</strong><span>Recorded during the critical execution scope</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="perkoa-phase3">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">BURKINA FASO · CONSTRUCTION MANAGER</div>
-        <h2>Perkoa Zinc Mine — TSF II Phase III</h2>
-      </div>
-      <p>
-        Multidisciplinary construction management of a new Tailings Storage
-        Facility involving major earthworks, geomembrane lining and drainage
-        infrastructure.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Project Overview</h3>
-      <p>
-        TSF II Phase III was developed to provide the mine with long-term
-        tailings storage capacity. The project included large-scale earthworks,
-        geomembrane installation, drainage and leak-detection infrastructure,
-        construction quality control and progressive commissioning activities.
-      </p>
-      <p>
-        I coordinated the construction programme and contractor interfaces,
-        while the appointed Engineer of Record retained responsibility for
-        design, technical approval and engineering verification.
-      </p>
-    </div>
-
-    <br>
-
-    <div class="grid-2">
-      <div class="card">
-        <h3>Project Challenge</h3>
-        <p>
-          The project required major earthworks and specialist liner works to
-          be delivered in a remote operating environment. Success depended on
-          disciplined sequencing, material planning, contractor coordination
-          and clear technical interfaces between construction teams and the
-          Engineer of Record.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>My Role</h3>
-        <ul class="list-clean">
-          <li>✓ Construction sequencing and programme management</li>
-          <li>✓ Contractor coordination and interface management</li>
-          <li>✓ Procurement evaluation and material planning</li>
-          <li>✓ QA/QC coordination for earthworks and geomembrane</li>
-          <li>✓ Progress monitoring and management reporting</li>
-          <li>✓ Coordination with operations and technical teams</li>
-          <li>✓ Safety and environmental implementation</li>
-        </ul>
-      </div>
-    </div>
-
-    <br>
-
-    <div class="grid-2">
-      <div class="card">
-        <h3>Key Technical Details</h3>
-        <ul class="list-clean">
-          <li><strong>Facility footprint:</strong> approximately 500 m × 250 m</li>
-          <li><strong>Maximum height:</strong> approximately 11 m</li>
-          <li><strong>Earthworks:</strong> approximately 500,000 m³</li>
-          <li><strong>Geomembrane:</strong> approximately 170,000 m²</li>
-          <li><strong>Drainage pipeline:</strong> approximately 3,000 m</li>
-          <li><strong>Delivery period:</strong> January 2019 to March 2021</li>
-          <li><strong>Approximate project value:</strong> USD 7 million</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Management Approach</h3>
-        <ul class="list-clean">
-          <li>✓ Coordinated multiple contractors and technical disciplines</li>
-          <li>✓ Monitored progress through structured reporting</li>
-          <li>✓ Supported supplier evaluation for geomembrane works</li>
-          <li>✓ Integrated survey, quality and construction information</li>
-          <li>✓ Maintained client, contractor and Engineer of Record interfaces</li>
-        </ul>
-      </div>
-    </div>
-
-    <br>
-
-    <div class="card">
-      <h3>Project Outcome</h3>
-      <p>
-        The project delivered a new operational tailings storage facility
-        through coordinated construction management, quality control and
-        disciplined interface management between the client, contractors,
-        survey personnel, quality teams and the Engineer of Record.
-      </p>
-      <p>
-        The project also demonstrated the importance of maintaining clear
-        separation between construction management responsibility and
-        engineering design responsibility on complex infrastructure works.
-      </p>
-    </div>
-
-    <div class="stat-grid">
-      <div class="stat"><strong>~500,000 m³</strong><span>Earthworks</span></div>
-      <div class="stat"><strong>~170,000 m²</strong><span>Geomembrane lining</span></div>
-      <div class="stat"><strong>~3,000 m</strong><span>Drainage infrastructure</span></div>
-      <div class="stat"><strong>2019–2021</strong><span>Delivery period</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section alt" id="ovacik">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">TÜRKİYE · SITE MANAGER</div>
-        <h2>Ovacık Wind Power Plant</h2>
-      </div>
-      <p>
-        Civil works, logistics and turbine erection management for a
-        utility-scale wind energy project in mountainous terrain.
-      </p>
-    </div>
-<div class="card">
-<img
-    src="images/ovacik-hero.jpeg"
-    alt="Ovacık Wind Power Plant"
-    class="project-hero-image">
-</div>
-    <div class="card">
-      <h3>Project Overview</h3>
-      <p>
-        The Ovacık Wind Power Plant included eight Nordex N131 wind turbines.
-        Project delivery required the coordination of civil works, heavy-lift
-        operations, turbine component logistics, route preparation and
-        installation activities.
-      </p>
-      <p>
-        Each turbine blade was approximately 65.5 metres long. Transporting the
-        blades through mountainous terrain required careful route assessment,
-        coordination of overhead and geometric constraints, and the use of a
-        blade-lifter system capable of raising the blade to an angle of
-        approximately 45 degrees.
-      </p>
-    </div>
-
-    <br>
-
-    <div class="grid-2">
-      <div class="card">
-        <h3>Project Challenge</h3>
-        <p>
-          The route included narrow curves, overhead constraints and limited
-          road geometry. A conventional transport approach would have required
-          more extensive road widening, additional temporary works and greater
-          environmental disturbance.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>My Role</h3>
-        <ul class="list-clean">
-          <li>✓ Site management and construction coordination</li>
-          <li>✓ Civil works and access-road preparation</li>
-          <li>✓ Turbine component logistics</li>
-          <li>✓ Blade transportation coordination</li>
-          <li>✓ Heavy-lift and crane interface management</li>
-          <li>✓ Contractor and stakeholder coordination</li>
-          <li>✓ Health, safety and environmental implementation</li>
-        </ul>
-      </div>
-    </div>
-
-    <br>
-
-    <div class="grid-2">
-      <div class="card">
-        <h3>Key Technical Details</h3>
-        <ul class="list-clean">
-          <li><strong>Wind turbines:</strong> 8 Nordex N131 units</li>
-          <li><strong>Blade length:</strong> approximately 65.5 m</li>
-          <li><strong>Blade-lifter angle:</strong> up to approximately 45°</li>
-          <li><strong>Main erection crane:</strong> approximately 600 tonnes</li>
-          <li><strong>Project environment:</strong> mountainous terrain</li>
-          <li><strong>Key challenge:</strong> oversized component transportation</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Engineering Contribution</h3>
-        <p>
-          The blade transportation strategy enabled the convoy to negotiate
-          difficult route sections while reducing the extent of road widening
-          that would otherwise have been required.
-        </p>
-        <p>
-          The solution combined route planning, access preparation, temporary
-          traffic arrangements, specialist transportation equipment and close
-          operational coordination.
-        </p>
-      </div>
-    </div>
-
-    <br>
-
-    <div class="card">
-      <h3>Project Outcome</h3>
-      <p>
-        The transportation and erection activities were delivered through
-        coordinated civil, logistics and heavy-lift planning. The blade-lifter
-        solution provided a practical response to the project's route
-        constraints and later received national media coverage.
-      </p>
-      <a
-        class="btn btn-dark"
-        target="_blank"
-        rel="noopener"
-        href="https://www.dha.com.tr/ekonomi/ruzgar-turbinleri-kanatlarinin-daglik-arazide-tasinmasi-icin-proje-gelistirildi-2779869">
-        View Media Coverage
-      </a>
-    </div>
-
-    <div class="stat-grid">
-      <div class="stat"><strong>8</strong><span>Wind turbines</span></div>
-      <div class="stat"><strong>65.5 m</strong><span>Blade length</span></div>
-      <div class="stat"><strong>45°</strong><span>Blade-lifter operating angle</span></div>
-      <div class="stat"><strong>600 t</strong><span>Main erection crane</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container grid-2">
-    <div>
-      <div class="kicker">SUPPORTING EVIDENCE</div>
-      <h2>Project Documents and Photographs</h2>
-      <p>
-        Selected project summaries, organisation charts, construction
-        photographs, quality records and supporting evidence are indexed on
-        the IET Fellowship page.
-      </p>
-      <a class="btn btn-dark" href="fellowship.html">
-        View IET Fellowship Evidence
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>Evidence Categories</h3>
-      <ul class="list-clean">
-        <li>✓ Organisation and reporting structures</li>
-        <li>✓ Construction photographs</li>
-        <li>✓ QA/QC records</li>
-        <li>✓ Procurement and alternatives evaluations</li>
-        <li>✓ Project delivery summaries</li>
-        <li>✓ Media and publication evidence</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
+
+<!-- IMAGE LIGHTBOX -->
+
+<div
+  class="image-lightbox"
+  id="imageLightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Expanded project photograph"
+>
+
+  <div class="image-lightbox-content">
+
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      type="button"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img id="lightboxImage" src="" alt="">
+
+    <div
+      class="image-lightbox-caption"
+      id="lightboxCaption"
+    ></div>
+
+  </div>
+</div>
+
+
 <footer>
   <div class="container footer-grid">
+
     <div>
       <strong>Oguz Kahraman</strong>
       <br>
-      <span class="small">Civil Engineer · Construction Manager · PMP® · GMICE</span>
+
+      <span class="small">
+        Civil Engineer · Construction Manager · PMP® · GMICE
+      </span>
     </div>
-    <div class="small">© <span id="year"></span> Oguz Kahraman. Professional portfolio.</div>
+
+    <div class="small">
+      © <span id="year"></span> Oguz Kahraman. Professional portfolio.
+    </div>
+
   </div>
 </footer>
 
+
 <script src="js/script.js"></script>
+
+<script>
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxCaption = document.getElementById("lightboxCaption");
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  const projectImages = document.querySelectorAll(
+    ".project-hero img, .gallery-item img"
+  );
+
+  projectImages.forEach((image) => {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent =
+        image.dataset.caption || image.alt;
+
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    lightboxImage.src = "";
+    document.body.style.overflow = "";
+  }
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+  });
+</script>
 
 </body>
 </html>
