@@ -273,3 +273,6 @@ html {
 .gallery-item img {
     height: 190px;
 }
+html {
+    zoom: 0.9;
+}
