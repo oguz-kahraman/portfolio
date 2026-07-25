@@ -125,3 +125,101 @@ hr{margin:24px 0;border:0;border-top:1px solid var(--line)}
   .footer-grid{display:block}
   .project-hero-image{height:280px}
 }
+
+/* ===== Credentials Page ===== */
+
+.credential-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.credential-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#fff;
+  box-shadow:0 6px 20px rgba(11,31,51,.055);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.credential-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(30,95,138,.32);
+  box-shadow:0 12px 28px rgba(11,31,51,.10);
+}
+
+.credential-logo-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:112px;
+  padding:18px;
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(135deg,#f8fafc,#eef4f8);
+}
+
+.credential-logo-wrap.ice-panel{
+  background:#13849a;
+}
+
+.credential-logo{
+  width:auto;
+  max-width:180px;
+  max-height:72px;
+  object-fit:contain;
+}
+
+.credential-logo.square{
+  max-width:78px;
+  max-height:78px;
+}
+
+.credential-body{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding:21px;
+}
+
+.credential-body h2{
+  margin:0 0 5px;
+  color:var(--navy);
+  font-size:1.2rem;
+  line-height:1.25;
+}
+
+.credential-issuer{
+  margin:0 0 12px;
+  color:var(--blue);
+  font-size:.87rem;
+  font-weight:750;
+}
+
+.credential-description{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+
+.credential-button{
+  align-self:flex-start;
+  margin-top:auto;
+}
+
+.credential-note-section{
+  padding-top:28px;
+  padding-bottom:28px;
+}
+
+@media (max-width:760px){
+  .credential-grid{
+    grid-template-columns:1fr;
+  }
+
+  .credential-logo-wrap{
+    height:100px;
+  }
+}
