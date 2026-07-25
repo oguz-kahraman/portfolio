@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title">
+  <title id="title">Flag of Burkina Faso</title>
+  <rect width="1200" height="400" fill="#ef2b2d"/>
+  <rect y="400" width="1200" height="400" fill="#009e49"/>
+  <polygon fill="#fcd116" points="600,245 642,366 770,369 668,446 705,570 600,498 495,570 532,446 430,369 558,366"/>
+</svg>
