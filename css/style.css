@@ -983,3 +983,270 @@ hr{margin:24px 0;border:0;border-top:1px solid var(--line)}
     max-width:none;
   }
 }
+
+/* ===== Final About Page ===== */
+
+.about-profile{
+  padding:48px 0 30px;
+  background:linear-gradient(135deg,#ffffff,#f7f9fb);
+}
+
+.about-profile-copy{
+  max-width:760px;
+}
+
+.about-profile-copy h1{
+  margin:8px 0 18px;
+  color:var(--navy);
+  font-size:clamp(2.55rem,5vw,4.25rem);
+  line-height:1.04;
+}
+
+.about-profile-copy > p{
+  max-width:700px;
+  color:var(--muted);
+  font-size:1rem;
+}
+
+.about-stat-row{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:26px;
+}
+
+.about-stat-item{
+  display:flex;
+  min-height:118px;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+  text-align:center;
+}
+
+.about-stat-icon{
+  display:grid;
+  width:46px;
+  height:46px;
+  place-items:center;
+  margin-bottom:9px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  color:var(--navy);
+  background:#fff;
+  font-size:1.2rem;
+}
+
+.about-stat-item strong{
+  color:var(--navy);
+  font-size:.9rem;
+}
+
+.about-stat-item small{
+  color:var(--muted);
+  font-size:.73rem;
+}
+
+.about-overview-section{
+  padding-top:24px;
+}
+
+.about-overview-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+
+.about-panel,
+.about-career-card{
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#fff;
+  box-shadow:0 6px 20px rgba(11,31,51,.055);
+}
+
+.about-panel-title{
+  margin-bottom:16px;
+  color:var(--navy);
+  font-size:.92rem;
+  font-weight:850;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+
+.about-check-list{
+  display:grid;
+  gap:0;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.about-check-list li{
+  position:relative;
+  padding:8px 0 8px 24px;
+  border-bottom:1px solid var(--line);
+  color:var(--ink);
+  font-size:.86rem;
+}
+
+.about-check-list li:last-child{
+  border-bottom:0;
+}
+
+.about-check-list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:8px;
+  display:grid;
+  width:15px;
+  height:15px;
+  place-items:center;
+  border-radius:50%;
+  color:#fff;
+  background:var(--navy);
+  font-size:.62rem;
+}
+
+.about-industry-item,
+.about-country-item{
+  display:grid;
+  grid-template-columns:46px 1fr;
+  gap:12px;
+  align-items:center;
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.about-industry-item:last-child,
+.about-country-item:last-of-type{
+  border-bottom:0;
+}
+
+.about-round-icon{
+  display:grid;
+  width:42px;
+  height:42px;
+  place-items:center;
+  border-radius:50%;
+  color:var(--navy);
+  background:var(--paper);
+  font-size:1.15rem;
+}
+
+.about-industry-item strong,
+.about-country-item strong{
+  color:var(--navy);
+  font-size:.9rem;
+}
+
+.about-industry-item p,
+.about-country-item p{
+  margin:2px 0 0;
+  color:var(--muted);
+  font-size:.78rem;
+  line-height:1.4;
+}
+
+.about-flag{
+  display:block;
+  font-size:2.35rem;
+  line-height:1;
+}
+
+.about-country-summary{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:18px;
+  padding:14px;
+  border-radius:10px;
+  background:var(--paper);
+  text-align:center;
+}
+
+.about-country-summary strong{
+  color:var(--navy);
+  font-size:.88rem;
+}
+
+.about-country-summary span{
+  color:var(--muted);
+  font-size:.78rem;
+}
+
+.about-career-card{
+  padding:22px 24px 6px;
+}
+
+.about-timeline{
+  margin-top:4px;
+}
+
+.about-logo-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+
+.about-logo-item{
+  display:flex;
+  min-height:155px;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#fff;
+  text-align:center;
+  box-shadow:0 5px 16px rgba(11,31,51,.05);
+}
+
+.about-logo-item img{
+  width:auto;
+  max-width:150px;
+  max-height:60px;
+  object-fit:contain;
+}
+
+.about-logo-item strong{
+  color:var(--navy);
+  font-size:.88rem;
+}
+
+.about-logo-item span{
+  color:var(--muted);
+  font-size:.75rem;
+}
+
+.about-logo-item-ice{
+  background:#13849a;
+}
+
+.about-logo-item-ice strong,
+.about-logo-item-ice span{
+  color:#fff;
+}
+
+@media (max-width:900px){
+  .about-overview-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-stat-row,
+  .about-logo-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:560px){
+  .about-stat-row,
+  .about-logo-grid{
+    grid-template-columns:1fr;
+  }
+}
