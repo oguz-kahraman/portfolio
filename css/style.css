@@ -1249,3 +1249,6 @@ hr{
     margin:auto;
   }
 }
+.publications-list {
+    grid-template-columns: 1fr;
+}
